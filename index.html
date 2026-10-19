@@ -20,14 +20,13 @@
 
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Spectrum Executive Search"><img src="assets/img/logo.png" alt="Spectrum Executive Search" width="112" height="38"></a>
+    <a class="brand" href="index.html" aria-label="Spectrum Executive Search"><img src="assets/img/logo.png" alt="Spectrum Executive Search" width="112" height="38"></a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#about" data-i18n="nav.about">About</a></li>
-      <li><a href="#how" data-i18n="nav.how">How we search</a></li>
-      <li><a href="#industries" data-i18n="nav.industries">Industries</a></li>
-      <li><a href="#worldwide" data-i18n="nav.world">Worldwide</a></li>
+      <li><a href="index.html" data-i18n="nav.home" aria-current="page">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="how.html" data-i18n="nav.how">How we search</a></li>
       <li><a href="insights.html" data-i18n="nav.insights">Insights</a></li>
-      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-tools">
       <div class="lang" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="id" aria-pressed="false">ID</button></div>
@@ -37,7 +36,7 @@
   </div>
 </header>
 
-<main id="top">
+<main>
   <section class="hero">
     <div class="hero-video" aria-hidden="true">
       <video autoplay muted loop playsinline preload="auto" poster="assets/img/video-poster.jpg">
@@ -51,8 +50,8 @@
         <h1 style="margin-top:18px" data-i18n="hero.title">The leaders your business needs next.</h1>
         <p class="lede" data-i18n="hero.lede">We find directors, senior managers and specialists for the roles that shape a company.</p>
         <div class="actions">
-          <a class="btn btn-gold" href="#contact" data-i18n="hero.cta">Book a confidential chat</a>
-          <a class="btn btn-ghost" href="#video" data-i18n="hero.watch">Watch our story</a>
+          <a class="btn btn-gold" href="contact.html" data-i18n="hero.cta">Book a confidential chat</a>
+          <a class="btn btn-ghost" href="about.html#video" data-i18n="hero.watch">Watch our story</a>
         </div>
       </div>
     </div>
@@ -63,157 +62,19 @@
     <div class="wrap reveal">
       <p class="eyebrow center" style="text-align:center" data-i18n="clients.eyebrow">Companies we've worked with</p>
     </div>
-    <div class="marquee reveal" id="client-rows"></div>
+    <div class="marquee" id="client-rows"></div>
   </section>
 
-  <section class="section" id="about">
-    <div class="wrap split">
-      <div class="reveal">
-        <p class="eyebrow" data-i18n="about.eyebrow">What we do</p>
-        <div class="section-head" style="margin-bottom:0">
-          <h2 data-i18n="about.title">We search for the people who lead.</h2>
-          <p data-i18n="about.body"></p>
-        </div>
-      </div>
-      <div class="ladder">
-        <div class="rung reveal"><span class="lvl">I</span><div><h3 data-i18n="about.l1.t"></h3><p data-i18n="about.l1.d"></p></div></div>
-        <div class="rung reveal" style="transition-delay:.15s"><span class="lvl">II</span><div><h3 data-i18n="about.l2.t"></h3><p data-i18n="about.l2.d"></p></div></div>
-        <div class="rung reveal" style="transition-delay:.3s"><span class="lvl">III</span><div><h3 data-i18n="about.l3.t"></h3><p data-i18n="about.l3.d"></p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="how">
+  <section class="section" id="explore">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="how.eyebrow">How a search works</p>
-        <h2 data-i18n="how.title"></h2>
+        <p class="eyebrow" data-i18n="explore.eyebrow">Get to know us</p>
+        <h2 data-i18n="explore.title"></h2>
       </div>
-      <ol class="flow">
-        <!-- 1: the brief, with role, team and culture ticked off -->
-        <li class="fstep">
-          <svg class="ill" viewBox="0 0 200 150" aria-hidden="true">
-            <rect x="48" y="12" width="104" height="126" rx="10" class="paper"/>
-            <rect x="62" y="26" width="46" height="6" rx="3" class="bar gold-bar"/>
-            <g class="a" style="transition-delay:.2s"><rect x="62" y="50" width="14" height="14" rx="3" class="box"/><path d="M65 57l3 3 6-6" class="tick" pathLength="1"/><text x="84" y="61" class="lbl" data-i18n="how.k.role">Role</text></g>
-            <g class="a" style="transition-delay:.7s"><rect x="62" y="78" width="14" height="14" rx="3" class="box"/><path d="M65 85l3 3 6-6" class="tick" pathLength="1"/><text x="84" y="89" class="lbl" data-i18n="how.k.team">Team</text></g>
-            <g class="a" style="transition-delay:1.2s"><rect x="62" y="106" width="14" height="14" rx="3" class="box"/><path d="M65 113l3 3 6-6" class="tick" pathLength="1"/><text x="84" y="117" class="lbl" data-i18n="how.k.culture">Culture</text></g>
-          </svg>
-          <span class="num">1</span><h3 data-i18n="how.s1.t"></h3><p data-i18n="how.s1.d"></p>
-        </li>
-        <!-- 2: a pin with a small circle and the first few people inside it -->
-        <li class="fstep">
-          <svg class="ill" viewBox="0 0 200 150" aria-hidden="true">
-            <circle cx="100" cy="78" r="44" class="zone a" style="transition-delay:.1s"/>
-            <g class="a" style="transition-delay:.5s"><use href="#person" x="72" y="62"/></g>
-            <g class="a" style="transition-delay:.8s"><use href="#person" x="126" y="70"/></g>
-            <g class="a" style="transition-delay:1.1s"><use href="#person" x="84" y="102"/></g>
-            <g class="a" style="transition-delay:1.4s"><use href="#person" x="118" y="104"/></g>
-            <use href="#pin" x="100" y="78"/>
-          </svg>
-          <span class="num">2</span><h3 data-i18n="how.s2.t"></h3><p data-i18n="how.s2.d"></p>
-        </li>
-        <!-- 3: the circle widens and many more people come into reach -->
-        <li class="fstep">
-          <svg class="ill" viewBox="0 0 200 150" aria-hidden="true">
-            <circle cx="100" cy="78" r="24" class="zone faint"/>
-            <circle cx="100" cy="78" r="46" class="zone grow a" style="transition-delay:.1s"/>
-            <circle cx="100" cy="78" r="68" class="zone grow a" style="transition-delay:.6s"/>
-            <g class="a" style="transition-delay:.4s"><use href="#person" x="58" y="58" class="sm"/><use href="#person" x="142" y="62" class="sm"/><use href="#person" x="120" y="118" class="sm"/></g>
-            <g class="a" style="transition-delay:.9s"><use href="#person" x="40" y="96" class="sm"/><use href="#person" x="160" y="104" class="sm"/><use href="#person" x="100" y="20" class="sm"/><use href="#person" x="70" y="132" class="sm"/><use href="#person" x="148" y="30" class="sm"/><use href="#person" x="44" y="34" class="sm"/></g>
-            <use href="#pin" x="100" y="78"/>
-          </svg>
-          <span class="num">3</span><h3 data-i18n="how.s3.t"></h3><p data-i18n="how.s3.d"></p>
-        </li>
-        <!-- 4: three people on the shortlist, each checked -->
-        <li class="fstep">
-          <svg class="ill" viewBox="0 0 200 150" aria-hidden="true">
-            <g class="a slide" style="transition-delay:.2s"><rect x="30" y="16" width="140" height="34" rx="9" class="paper"/><circle cx="48" cy="33" r="9" class="avatar"/><rect x="64" y="26" width="54" height="5" rx="2.5" class="bar"/><rect x="64" y="36" width="36" height="5" rx="2.5" class="bar dim"/><circle cx="152" cy="33" r="8" class="check"/><path d="M148 33l3 3 5-5" class="tick on-gold" pathLength="1"/></g>
-            <g class="a slide" style="transition-delay:.7s"><rect x="30" y="58" width="140" height="34" rx="9" class="paper"/><circle cx="48" cy="75" r="9" class="avatar"/><rect x="64" y="68" width="48" height="5" rx="2.5" class="bar"/><rect x="64" y="78" width="40" height="5" rx="2.5" class="bar dim"/><circle cx="152" cy="75" r="8" class="check"/><path d="M148 75l3 3 5-5" class="tick on-gold" pathLength="1"/></g>
-            <g class="a slide" style="transition-delay:1.2s"><rect x="30" y="100" width="140" height="34" rx="9" class="paper"/><circle cx="48" cy="117" r="9" class="avatar"/><rect x="64" y="110" width="58" height="5" rx="2.5" class="bar"/><rect x="64" y="120" width="30" height="5" rx="2.5" class="bar dim"/><circle cx="152" cy="117" r="8" class="check"/><path d="M148 117l3 3 5-5" class="tick on-gold" pathLength="1"/></g>
-          </svg>
-          <span class="num">4</span><h3 data-i18n="how.s4.t"></h3><p data-i18n="how.s4.d"></p>
-        </li>
-      </ol>
-      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-        <defs>
-          <g id="person"><circle cx="0" cy="-6" r="5.5" class="ph"/><path d="M-9 10a9 9 0 0 1 18 0z" class="ph"/></g>
-          <g id="pin"><path d="M0 8c-1-6-9-10-9-17a9 9 0 0 1 18 0c0 7-8 11-9 17z" class="pin"/><circle cx="0" cy="-9" r="3.2" class="pin-dot"/></g>
-        </defs>
-      </svg>
-    </div>
-  </section>
-
-  <section class="section" id="industries">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="ind.eyebrow">Industries we cover</p>
-        <h2 data-i18n="ind.title"></h2>
-        <p data-i18n="ind.lede"></p>
-      </div>
-      <div class="industries">
-        <div class="ind reveal"><svg viewBox="0 0 32 32"><path d="M8 11h16l-1.5 16h-13z"/><path d="M12 11V8a4 4 0 0 1 8 0v3"/></svg><h3 data-i18n="ind.fmcg"></h3></div>
-        <div class="ind reveal"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 4v4M16 24v4M4 16h4M24 16h4M7.5 7.5l2.8 2.8M21.7 21.7l2.8 2.8M7.5 24.5l2.8-2.8M21.7 10.3l2.8-2.8"/></svg><h3 data-i18n="ind.auto"></h3></div>
-        <div class="ind reveal"><svg viewBox="0 0 32 32"><rect x="6" y="11" width="20" height="10" rx="5" transform="rotate(-45 16 16)"/><path d="M12.5 12.5l7 7"/></svg><h3 data-i18n="ind.pharma"></h3></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="worldwide">
-    <div class="wrap world">
-      <div class="reveal">
-        <p class="eyebrow" data-i18n="world.eyebrow">Worldwide</p>
-        <div class="section-head" style="margin-bottom:0">
-          <h2 data-i18n="world.title"></h2>
-          <p data-i18n="world.body"></p>
-        </div>
-        <p class="eyebrow" style="margin-top:36px" data-i18n="world.ex">For example</p>
-        <div class="example" style="margin-top:12px">
-          <span class="pin gold"><span data-i18n="world.from"></span><b data-i18n="world.de"></b></span>
-          <span class="arrow" aria-hidden="true"></span>
-          <span class="pin gold"><span data-i18n="world.to"></span><b data-i18n="world.br"></b></span>
-        </div>
-      </div>
-      <div class="globe-box reveal"><canvas id="globe" aria-label="Globe with a search line from Germany to Brazil" role="img"></canvas></div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:40px">
-    <div class="wrap">
-      <div class="stats reveal">
-        <div class="stat"><div class="n" data-count="2001" data-from="1990">2001</div><div class="l" data-i18n="stats.since"></div></div>
-        <div class="stat"><div class="n" data-count="40" data-suffix="+">40+</div><div class="l" data-i18n="stats.clients"></div></div>
-        <div class="stat"><div class="n" data-count="12">12</div><div class="l" data-i18n="stats.areas"></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="video">
-    <div class="wrap">
-      <div class="section-head center reveal" style="text-align:center">
-        <p class="eyebrow" data-i18n="video.eyebrow">Company profile</p>
-        <h2 data-i18n="video.title"></h2>
-      </div>
-      <div class="video-frame reveal">
-        <video controls playsinline preload="metadata" poster="assets/img/video-poster.jpg">
-          <source src="assets/video/spectrum-profile.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="insights">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="ins.eyebrow">Insights</p>
-        <h2 data-i18n="ins.title"></h2>
-        <p data-i18n="ins.lede"></p>
-      </div>
-      <div class="cards reveal" id="insight-cards"></div>
-      <p style="margin-top:28px" class="reveal"><a class="btn btn-ghost" href="insights.html" data-i18n="ins.all">Read all insights</a></p>
-      <div class="ig-strip reveal">
-        <div><h3 data-i18n="ig.title"></h3><p data-i18n="ig.body"></p></div>
-        <a class="btn btn-gold" href="https://www.instagram.com/spectrumexecutive/" target="_blank" rel="noopener" data-i18n="ig.cta">Follow on Instagram</a>
+      <div class="explore">
+        <a class="card reveal" href="about.html"><span class="tag" data-i18n="nav.about">About</span><h3 data-i18n="about.title"></h3><p data-i18n="explore.about"></p><span class="go"><span data-i18n="explore.go">Open</span> →</span></a>
+        <a class="card reveal" href="how.html"><span class="tag" data-i18n="nav.how">How we search</span><h3 data-i18n="how.title"></h3><p data-i18n="explore.how"></p><span class="go"><span data-i18n="explore.go">Open</span> →</span></a>
+        <a class="card reveal" href="insights.html"><span class="tag" data-i18n="nav.insights">Insights</span><h3 data-i18n="ins.title"></h3><p data-i18n="explore.insights"></p><span class="go"><span data-i18n="explore.go">Open</span> →</span></a>
       </div>
     </div>
   </section>
@@ -236,9 +97,10 @@
   <div class="wrap foot">
     <img src="assets/img/logo.png" alt="Spectrum Executive Search">
     <nav>
-      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="how.html" data-i18n="nav.how">How we search</a>
       <a href="insights.html" data-i18n="nav.insights">Insights</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
       <a href="https://www.instagram.com/spectrumexecutive/" target="_blank" rel="noopener">Instagram</a>
     </nav>
     <p>© <span data-year>2026</span> PT. Spektrum Prima Mandiri. <span data-i18n="foot.rights">All rights reserved.</span></p>
@@ -247,10 +109,6 @@
 
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/logo-paths.js"></script>
-<script src="assets/js/d3-array.min.js"></script>
-<script src="assets/js/d3-geo.min.js"></script>
-<script src="assets/js/topojson-client.min.js"></script>
-<script src="assets/js/world.js"></script>
 <script src="assets/js/site.js"></script>
 </body>
 </html>

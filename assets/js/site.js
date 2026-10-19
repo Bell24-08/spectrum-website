@@ -121,6 +121,9 @@
       ["multi-bintang", "Multi Bintang Indonesia"], ["kalbe", "Kalbe"], ["cigna", "Cigna"], ["cma-cgm", "CMA CGM"], ["arnotts", "Arnott's"],
       ["abc-kraft-heinz", "ABC Kraft Heinz"], ["emtek", "Emtek"], ["tvs", "TVS"], ["kone", "KONE"], ["banpu", "Banpu"],
     ];
+    // Each logo is baked onto its own card image, so a card can never show up empty.
+    // The rows stay hidden until every card has decoded, then fade in together.
+    const imgs = [];
     [CLIENTS.slice(0, 10), CLIENTS.slice(10)].forEach((set, r) => {
       const row = document.createElement("div");
       row.className = "mrow" + (r ? " rev" : "");
@@ -128,15 +131,19 @@
       track.className = "track";
       // the set twice, so the loop is seamless
       [...set, ...set].forEach(([file, name], i) => {
-        const tile = document.createElement("div");
-        tile.className = "tile";
-        if (i >= set.length) tile.setAttribute("aria-hidden", "true");
         const img = document.createElement("img");
-        img.src = `assets/img/clients/${file}.jpg`; img.alt = i < set.length ? name : ""; img.loading = "lazy";
-        tile.append(img); track.append(tile);
+        img.className = "tile";
+        img.src = `assets/img/clients/${file}.webp`;
+        img.alt = i < set.length ? name : "";
+        img.width = 190; img.height = 96; img.decoding = "async";
+        if (i >= set.length) img.setAttribute("aria-hidden", "true");
+        imgs.push(img); track.append(img);
       });
       row.append(track); rows.append(row);
     });
+    const ready = () => rows.classList.add("ready");
+    Promise.all(imgs.map((im) => (im.decode ? im.decode() : Promise.resolve()).catch(() => {}))).then(ready);
+    setTimeout(ready, 6000);
   }
 
   /* ---------- how a search works: each step plays its picture in turn ---------- */
