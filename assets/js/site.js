@@ -15,7 +15,7 @@
   const langHooks = [];
   function applyLang() {
     document.documentElement.lang = lang;
-    $$("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
+    $$("[data-i18n]").forEach((el) => { const v = I18N[lang][el.dataset.i18n] || I18N.en[el.dataset.i18n]; if (v) el.textContent = v; });
     $$("[data-i18n-ph]").forEach((el) => (el.placeholder = t(el.dataset.i18nPh)));
     $$("[data-i18n-aria]").forEach((el) => el.setAttribute("aria-label", t(el.dataset.i18nAria)));
     $$(".lang button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === lang));
